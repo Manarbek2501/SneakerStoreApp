@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		16DAC46C3B21D89799025842 /* Pods_SneakerStoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F63316151E9C58BCD76B6C /* Pods_SneakerStoreApp.framework */; };
 		4B6F7E6F2A4C90F5002B60D2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F7E6E2A4C90F5002B60D2 /* ProfileView.swift */; };
+		4B6F7E722A4CA217002B60D2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6F7E712A4CA217002B60D2 /* FirebaseAuth */; };
+		4B6F7E742A4CA217002B60D2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6F7E732A4CA217002B60D2 /* FirebaseDatabase */; };
+		4B6F7E762A4CA217002B60D2 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6F7E752A4CA217002B60D2 /* FirebaseDatabaseSwift */; };
+		4B6F7E782A4CA217002B60D2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6F7E772A4CA217002B60D2 /* FirebaseFirestore */; };
+		4B6F7E7A2A4CA217002B60D2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6F7E792A4CA217002B60D2 /* FirebaseFirestoreSwift */; };
+		4B6F7E7C2A4CA217002B60D2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6F7E7B2A4CA217002B60D2 /* FirebaseStorage */; };
+		4B6F7E7E2A4CA22B002B60D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B6F7E7D2A4CA22B002B60D2 /* GoogleService-Info.plist */; };
+		4B6F7E802A4CA797002B60D2 /* CatalogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F7E7F2A4CA797002B60D2 /* CatalogAPI.swift */; };
+		4B6F7E822A4CA871002B60D2 /* CatalogModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F7E812A4CA871002B60D2 /* CatalogModal.swift */; };
+		4B6F7E842A4CAB51002B60D2 /* CatalogCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F7E832A4CAB50002B60D2 /* CatalogCardsView.swift */; };
+		4B6F7E862A4CAC16002B60D2 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F7E852A4CAC16002B60D2 /* Builder.swift */; };
 		4BD14DC82A4C84E700A56B87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DC72A4C84E700A56B87 /* AppDelegate.swift */; };
 		4BD14DCA2A4C84E700A56B87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DC92A4C84E700A56B87 /* SceneDelegate.swift */; };
 		4BD14DCC2A4C84E700A56B87 /* MainScreenTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DCB2A4C84E700A56B87 /* MainScreenTabBarController.swift */; };
@@ -23,6 +34,11 @@
 /* Begin PBXFileReference section */
 		05F63316151E9C58BCD76B6C /* Pods_SneakerStoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SneakerStoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6F7E6E2A4C90F5002B60D2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4B6F7E7D2A4CA22B002B60D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B6F7E7F2A4CA797002B60D2 /* CatalogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogAPI.swift; sourceTree = "<group>"; };
+		4B6F7E812A4CA871002B60D2 /* CatalogModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModal.swift; sourceTree = "<group>"; };
+		4B6F7E832A4CAB50002B60D2 /* CatalogCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCardsView.swift; sourceTree = "<group>"; };
+		4B6F7E852A4CAC16002B60D2 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		4BD14DC42A4C84E700A56B87 /* SneakerStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakerStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD14DC72A4C84E700A56B87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BD14DC92A4C84E700A56B87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +59,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B6F7E762A4CA217002B60D2 /* FirebaseDatabaseSwift in Frameworks */,
+				4B6F7E742A4CA217002B60D2 /* FirebaseDatabase in Frameworks */,
 				16DAC46C3B21D89799025842 /* Pods_SneakerStoreApp.framework in Frameworks */,
+				4B6F7E782A4CA217002B60D2 /* FirebaseFirestore in Frameworks */,
+				4B6F7E7C2A4CA217002B60D2 /* FirebaseStorage in Frameworks */,
+				4B6F7E722A4CA217002B60D2 /* FirebaseAuth in Frameworks */,
+				4B6F7E7A2A4CA217002B60D2 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +125,7 @@
 		4BD14DDC2A4C88E600A56B87 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				4B6F7E7D2A4CA22B002B60D2 /* GoogleService-Info.plist */,
 				4BD14DCD2A4C84E700A56B87 /* Main.storyboard */,
 				4BD14DD02A4C84E800A56B87 /* Assets.xcassets */,
 				4BD14DD22A4C84E800A56B87 /* LaunchScreen.storyboard */,
@@ -113,6 +136,7 @@
 		4BD14DDD2A4C893E00A56B87 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				4B6F7E852A4CAC16002B60D2 /* Builder.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -121,6 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				4BD14DE32A4C8A7900A56B87 /* CatalogViewController.swift */,
+				4B6F7E7F2A4CA797002B60D2 /* CatalogAPI.swift */,
+				4B6F7E812A4CA871002B60D2 /* CatalogModal.swift */,
+				4B6F7E832A4CAB50002B60D2 /* CatalogCardsView.swift */,
 			);
 			path = CatalogFeature;
 			sourceTree = "<group>";
@@ -169,6 +196,14 @@
 			dependencies = (
 			);
 			name = SneakerStoreApp;
+			packageProductDependencies = (
+				4B6F7E712A4CA217002B60D2 /* FirebaseAuth */,
+				4B6F7E732A4CA217002B60D2 /* FirebaseDatabase */,
+				4B6F7E752A4CA217002B60D2 /* FirebaseDatabaseSwift */,
+				4B6F7E772A4CA217002B60D2 /* FirebaseFirestore */,
+				4B6F7E792A4CA217002B60D2 /* FirebaseFirestoreSwift */,
+				4B6F7E7B2A4CA217002B60D2 /* FirebaseStorage */,
+			);
 			productName = SneakerStoreApp;
 			productReference = 4BD14DC42A4C84E700A56B87 /* SneakerStoreApp.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +232,9 @@
 				Base,
 			);
 			mainGroup = 4BD14DBB2A4C84E700A56B87;
+			packageReferences = (
+				4B6F7E702A4CA217002B60D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4BD14DC52A4C84E700A56B87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -214,6 +252,7 @@
 				4BD14DD42A4C84E800A56B87 /* LaunchScreen.storyboard in Resources */,
 				4BD14DD12A4C84E800A56B87 /* Assets.xcassets in Resources */,
 				4BD14DCF2A4C84E700A56B87 /* Main.storyboard in Resources */,
+				4B6F7E7E2A4CA22B002B60D2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,13 +305,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B6F7E802A4CA797002B60D2 /* CatalogAPI.swift in Sources */,
 				4BD14DE42A4C8A7900A56B87 /* CatalogViewController.swift in Sources */,
 				4BD14DCC2A4C84E700A56B87 /* MainScreenTabBarController.swift in Sources */,
+				4B6F7E862A4CAC16002B60D2 /* Builder.swift in Sources */,
 				4BD14DC82A4C84E700A56B87 /* AppDelegate.swift in Sources */,
+				4B6F7E842A4CAB51002B60D2 /* CatalogCardsView.swift in Sources */,
 				4BD14DE82A4C8AE900A56B87 /* ProfileViewController.swift in Sources */,
 				4BD14DE62A4C8ADC00A56B87 /* CartViewController.swift in Sources */,
 				4B6F7E6F2A4C90F5002B60D2 /* ProfileView.swift in Sources */,
 				4BD14DCA2A4C84E700A56B87 /* SceneDelegate.swift in Sources */,
+				4B6F7E822A4CA871002B60D2 /* CatalogModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +535,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B6F7E702A4CA217002B60D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B6F7E712A4CA217002B60D2 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B6F7E702A4CA217002B60D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4B6F7E732A4CA217002B60D2 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B6F7E702A4CA217002B60D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		4B6F7E752A4CA217002B60D2 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B6F7E702A4CA217002B60D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		4B6F7E772A4CA217002B60D2 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B6F7E702A4CA217002B60D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		4B6F7E792A4CA217002B60D2 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B6F7E702A4CA217002B60D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		4B6F7E7B2A4CA217002B60D2 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B6F7E702A4CA217002B60D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4BD14DBC2A4C84E700A56B87 /* Project object */;
 }
