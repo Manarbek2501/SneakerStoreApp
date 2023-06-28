@@ -8,26 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		16DAC46C3B21D89799025842 /* Pods_SneakerStoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F63316151E9C58BCD76B6C /* Pods_SneakerStoreApp.framework */; };
+		4B6F7E6F2A4C90F5002B60D2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F7E6E2A4C90F5002B60D2 /* ProfileView.swift */; };
 		4BD14DC82A4C84E700A56B87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DC72A4C84E700A56B87 /* AppDelegate.swift */; };
 		4BD14DCA2A4C84E700A56B87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DC92A4C84E700A56B87 /* SceneDelegate.swift */; };
-		4BD14DCC2A4C84E700A56B87 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DCB2A4C84E700A56B87 /* MainScreenViewController.swift */; };
+		4BD14DCC2A4C84E700A56B87 /* MainScreenTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DCB2A4C84E700A56B87 /* MainScreenTabBarController.swift */; };
 		4BD14DCF2A4C84E700A56B87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD14DCD2A4C84E700A56B87 /* Main.storyboard */; };
 		4BD14DD12A4C84E800A56B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD14DD02A4C84E800A56B87 /* Assets.xcassets */; };
 		4BD14DD42A4C84E800A56B87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD14DD22A4C84E800A56B87 /* LaunchScreen.storyboard */; };
-		4BD14DDF2A4C894A00A56B87 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DDE2A4C894A00A56B87 /* Builder.swift */; };
+		4BD14DE42A4C8A7900A56B87 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DE32A4C8A7900A56B87 /* CatalogViewController.swift */; };
+		4BD14DE62A4C8ADC00A56B87 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DE52A4C8ADC00A56B87 /* CartViewController.swift */; };
+		4BD14DE82A4C8AE900A56B87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DE72A4C8AE900A56B87 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05F63316151E9C58BCD76B6C /* Pods_SneakerStoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SneakerStoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B6F7E6E2A4C90F5002B60D2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4BD14DC42A4C84E700A56B87 /* SneakerStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakerStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD14DC72A4C84E700A56B87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BD14DC92A4C84E700A56B87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BD14DCB2A4C84E700A56B87 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		4BD14DCB2A4C84E700A56B87 /* MainScreenTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTabBarController.swift; sourceTree = "<group>"; };
 		4BD14DCE2A4C84E700A56B87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BD14DD02A4C84E800A56B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BD14DD32A4C84E800A56B87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BD14DD52A4C84E800A56B87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BD14DDE2A4C894A00A56B87 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		4BD14DE32A4C8A7900A56B87 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		4BD14DE52A4C8ADC00A56B87 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		4BD14DE72A4C8AE900A56B87 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B0DEDB874D0E97E49EF8373C /* Pods-SneakerStoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakerStoreApp.debug.xcconfig"; path = "Target Support Files/Pods-SneakerStoreApp/Pods-SneakerStoreApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D430ED3CFF093694A69B1799 /* Pods-SneakerStoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakerStoreApp.release.xcconfig"; path = "Target Support Files/Pods-SneakerStoreApp/Pods-SneakerStoreApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				4BD14DC62A4C84E700A56B87 /* SneakerStoreApp */,
+				4BD14DCB2A4C84E700A56B87 /* MainScreenTabBarController.swift */,
 				4BD14DC52A4C84E700A56B87 /* Products */,
 				805F79D6D83445354073F7D7 /* Pods */,
 				1C812C2BDDBAD471AC080398 /* Frameworks */,
@@ -73,10 +80,13 @@
 		4BD14DC62A4C84E700A56B87 /* SneakerStoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				4BD14DD52A4C84E800A56B87 /* Info.plist */,
+				4BD14DE22A4C8A4C00A56B87 /* ProfileFeature */,
+				4BD14DE12A4C8A3C00A56B87 /* CartFeature */,
+				4BD14DE02A4C8A2E00A56B87 /* CatalogFeature */,
 				4BD14DDD2A4C893E00A56B87 /* Helper */,
 				4BD14DDC2A4C88E600A56B87 /* Supports */,
 				4BD14DDB2A4C88D000A56B87 /* Entry */,
-				4BD14DCB2A4C84E700A56B87 /* MainScreenViewController.swift */,
 			);
 			path = SneakerStoreApp;
 			sourceTree = "<group>";
@@ -96,7 +106,6 @@
 				4BD14DCD2A4C84E700A56B87 /* Main.storyboard */,
 				4BD14DD02A4C84E800A56B87 /* Assets.xcassets */,
 				4BD14DD22A4C84E800A56B87 /* LaunchScreen.storyboard */,
-				4BD14DD52A4C84E800A56B87 /* Info.plist */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -104,9 +113,33 @@
 		4BD14DDD2A4C893E00A56B87 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4BD14DDE2A4C894A00A56B87 /* Builder.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		4BD14DE02A4C8A2E00A56B87 /* CatalogFeature */ = {
+			isa = PBXGroup;
+			children = (
+				4BD14DE32A4C8A7900A56B87 /* CatalogViewController.swift */,
+			);
+			path = CatalogFeature;
+			sourceTree = "<group>";
+		};
+		4BD14DE12A4C8A3C00A56B87 /* CartFeature */ = {
+			isa = PBXGroup;
+			children = (
+				4BD14DE52A4C8ADC00A56B87 /* CartViewController.swift */,
+			);
+			path = CartFeature;
+			sourceTree = "<group>";
+		};
+		4BD14DE22A4C8A4C00A56B87 /* ProfileFeature */ = {
+			isa = PBXGroup;
+			children = (
+				4BD14DE72A4C8AE900A56B87 /* ProfileViewController.swift */,
+				4B6F7E6E2A4C90F5002B60D2 /* ProfileView.swift */,
+			);
+			path = ProfileFeature;
 			sourceTree = "<group>";
 		};
 		805F79D6D83445354073F7D7 /* Pods */ = {
@@ -115,7 +148,6 @@
 				B0DEDB874D0E97E49EF8373C /* Pods-SneakerStoreApp.debug.xcconfig */,
 				D430ED3CFF093694A69B1799 /* Pods-SneakerStoreApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -234,9 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BD14DCC2A4C84E700A56B87 /* MainScreenViewController.swift in Sources */,
+				4BD14DE42A4C8A7900A56B87 /* CatalogViewController.swift in Sources */,
+				4BD14DCC2A4C84E700A56B87 /* MainScreenTabBarController.swift in Sources */,
 				4BD14DC82A4C84E700A56B87 /* AppDelegate.swift in Sources */,
-				4BD14DDF2A4C894A00A56B87 /* Builder.swift in Sources */,
+				4BD14DE82A4C8AE900A56B87 /* ProfileViewController.swift in Sources */,
+				4BD14DE62A4C8ADC00A56B87 /* CartViewController.swift in Sources */,
+				4B6F7E6F2A4C90F5002B60D2 /* ProfileView.swift in Sources */,
 				4BD14DCA2A4C84E700A56B87 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
