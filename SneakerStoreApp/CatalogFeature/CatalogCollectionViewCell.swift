@@ -1,18 +1,16 @@
 //
-//  CatalogCardsView.swift
+//  CatalogCollectionViewCell.swift
 //  SneakerStoreApp
 //
-//  Created by Manarbek Bibit on 28.06.2023.
+//  Created by Manarbek Bibit on 01.07.2023.
 //
 
 import UIKit
-import SnapKit
 import Kingfisher
+import SnapKit
 
-class CatalogCardsView: UIView {
-    
+class CatalogCollectionViewCell: UICollectionViewCell {
     let image: UIImageView = build {
-        $0.contentMode = .scaleAspectFit
         $0.layer.cornerRadius = 12
     }
     let title: UILabel = build {
@@ -28,29 +26,38 @@ class CatalogCardsView: UIView {
     let containerView: UIView = build {
         $0.backgroundColor = .white
     }
-    
-    var model: CatalogData?
-    init() {
-        super.init(frame: .zero)
+    let button: UIButton = build {
+        $0.tintColor = .white
+        $0.setTitle("Add to cart", for: .normal)
+        $0.setTitle("Remove", for: .selected)
+        $0.backgroundColor = .black
+        $0.layer.cornerRadius = 18
+        $0.addTarget(self, action: #selector(getTapped), for: .touchUpInside)
+    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupUI()
     }
-    
+    override func layoutSubviews() {
+        self.layer.cornerRadius = 4
+        self.layer.masksToBounds = true
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     func configureCatalogCards(model: CatalogData) {
-        self.model = model
         let url = URL(string: model.image)
         image.kf.setImage(with: url, placeholder: UIImage(systemName: "rays"))
         title.text = model.title
         descriptionOfCatalog.text = model.description
-        price.text = model.price
+        price.text = "$\(model.price)"
     }
-    
+    @objc func getTapped() {
+        print("btn is tapped")
+    }
     private func setupUI() {
-        [title, image, descriptionOfCatalog, price].forEach {
+        [title, image, descriptionOfCatalog, price, button].forEach {
             containerView.addSubview($0)
         }
         addSubview(containerView)
@@ -62,7 +69,7 @@ class CatalogCardsView: UIView {
             $0.bottom.equalToSuperview()
         }
         image.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.equalToSuperview().offset(4)
             $0.left.equalToSuperview().offset(4)
             $0.right.equalToSuperview().offset(-4)
             $0.height.equalTo(166)
@@ -82,6 +89,12 @@ class CatalogCardsView: UIView {
             $0.top.equalTo(descriptionOfCatalog.snp.bottom).offset(4)
             $0.left.equalToSuperview().offset(4)
             $0.right.equalToSuperview()
+        }
+        button.snp.makeConstraints {
+            $0.top.equalTo(price.snp.bottom).offset(10)
+            $0.left.equalToSuperview().offset(4)
+            $0.right.equalToSuperview().offset(-4)
+            $0.height.equalTo(36)
         }
     }
 }

@@ -15,7 +15,7 @@ class MainScreenTabBarController: UITabBarController {
     }
 
     func setupTabBar() {
-        let catalogTabBar = self.createNav(title: "Catalog", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"), viewController: CatalogViewController(), navigationTitle: "Hello, Sneakerhead!")
+        let catalogTabBar = self.createNav(title: "Catalog", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"), viewController: CatalogViewController(viewModel: CatalogViewModel()), navigationTitle: "Hello, Sneakerhead!")
         
         let cartTabBar = self.createNav(title: "Cart", image: UIImage(systemName: "cart"), selectedImage: UIImage(systemName: "cart.fill"), viewController: CartViewController(), navigationTitle: "Cart")
         
