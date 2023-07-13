@@ -29,17 +29,12 @@ class CatalogCollectionViewCell: UICollectionViewCell {
     let containerView: UIView = build {
         $0.backgroundColor = .white
     }
-    let button: UIButton = build {
-        $0.tintColor = .white
-        $0.setTitle("Add to cart", for: .normal)
-        $0.setTitle("Remove", for: .selected)
-        $0.backgroundColor = .black
-        $0.layer.cornerRadius = 18
-        $0.addTarget(self, action: #selector(getTapped), for: .touchUpInside)
-    }
+    let button = CustomButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        button.addTarget(self, action: #selector(getTapped), for: .touchUpInside)
+        button.setTitle("Add to cart", for: .normal)
         setupUI()
         setAction()
     }

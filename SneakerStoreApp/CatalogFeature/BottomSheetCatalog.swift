@@ -39,15 +39,22 @@ class BottomSheetCatalog: UIViewController {
     let stepperValue: UILabel = build {
         $0.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
     }
+    let button = CustomButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        button.setTitle("Add to cart", for: .normal)
+        button.layer.cornerRadius = 25
+        button.addTarget(self, action: #selector(actionButton), for: .touchUpInside)
         setupUI()
     }
     @objc func stepperValueChanged(_ sender:UIStepper!) {
         stepperValue.text = "\(Int(sender.value))"
     }
-    
+    @objc func actionButton() {
+        self.dismiss(animated: true)
+    }
     private func setData() {
         guard let model = model else {return}
         let url = URL(string: model.image)
@@ -58,7 +65,7 @@ class BottomSheetCatalog: UIViewController {
         stepperValue.text = model.item
     }
     private func setupUI() {
-        [bottomImage, sheetPrice, sheetTitle, sheetDescription, stepper, stepperValue].forEach {
+        [bottomImage, sheetPrice, sheetTitle, sheetDescription, stepper, stepperValue, button].forEach {
             view.addSubview($0)
         }
         sheetTitle.snp.makeConstraints {
@@ -85,6 +92,11 @@ class BottomSheetCatalog: UIViewController {
         stepperValue.snp.makeConstraints {
             $0.left.equalTo(stepper.snp.right).offset(20)
             $0.top.equalTo(sheetDescription.snp.bottom).offset(27)
+        }
+        button.snp.makeConstraints {
+            $0.left.right.equalToSuperview().inset(16)
+            $0.top.equalTo(bottomImage.snp.bottom).offset(20)
+            $0.height.equalTo(52)
         }
     }
 }
