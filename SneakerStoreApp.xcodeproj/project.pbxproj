@@ -13,6 +13,7 @@
 		4B57E6DB2A601C740086D207 /* BottomSheetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57E6DA2A601C740086D207 /* BottomSheetConfiguration.swift */; };
 		4B57E6DD2A601CA40086D207 /* BottomSheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57E6DC2A601CA40086D207 /* BottomSheetPresentationController.swift */; };
 		4B57E6E12A60802A0086D207 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57E6E02A60802A0086D207 /* CustomButton.swift */; };
+		4B57E6E32A609C1E0086D207 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57E6E22A609C1E0086D207 /* CartTableViewCell.swift */; };
 		4B6F7E6F2A4C90F5002B60D2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F7E6E2A4C90F5002B60D2 /* ProfileView.swift */; };
 		4B6F7E722A4CA217002B60D2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6F7E712A4CA217002B60D2 /* FirebaseAuth */; };
 		4B6F7E742A4CA217002B60D2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6F7E732A4CA217002B60D2 /* FirebaseDatabase */; };
@@ -44,6 +45,7 @@
 		4B57E6DA2A601C740086D207 /* BottomSheetConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetConfiguration.swift; sourceTree = "<group>"; };
 		4B57E6DC2A601CA40086D207 /* BottomSheetPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetPresentationController.swift; sourceTree = "<group>"; };
 		4B57E6E02A60802A0086D207 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		4B57E6E22A609C1E0086D207 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		4B6F7E6E2A4C90F5002B60D2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4B6F7E7D2A4CA22B002B60D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4B6F7E812A4CA871002B60D2 /* CatalogModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModal.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				4BD14DE52A4C8ADC00A56B87 /* CartViewController.swift */,
+				4B57E6E22A609C1E0086D207 /* CartTableViewCell.swift */,
 			);
 			path = CartFeature;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				4B57E6E12A60802A0086D207 /* CustomButton.swift in Sources */,
 				4B57E6DD2A601CA40086D207 /* BottomSheetPresentationController.swift in Sources */,
 				4BD14DE42A4C8A7900A56B87 /* CatalogViewController.swift in Sources */,
+				4B57E6E32A609C1E0086D207 /* CartTableViewCell.swift in Sources */,
 				4B57E6D92A601B400086D207 /* BottomSheetTransition.swift in Sources */,
 				4BD14DCC2A4C84E700A56B87 /* MainScreenTabBarController.swift in Sources */,
 				4B6F7E862A4CAC16002B60D2 /* Builder.swift in Sources */,

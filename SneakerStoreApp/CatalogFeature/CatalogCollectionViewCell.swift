@@ -15,6 +15,7 @@ class CatalogCollectionViewCell: UICollectionViewCell {
     
     let image: UIImageView = build {
         $0.layer.cornerRadius = 12
+        $0.contentMode = .scaleToFill
     }
     let title: UILabel = build {
         $0.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
