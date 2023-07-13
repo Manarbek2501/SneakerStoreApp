@@ -13,6 +13,8 @@ class CatalogViewController: UIViewController {
     
     private let viewModel: CatalogViewModel
     
+    private let delegate = BottomSheetTransitioningDelegate(configuration: .default)
+    
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView()
         return collectionView
@@ -62,9 +64,12 @@ class CatalogViewController: UIViewController {
         layout.sectionInset = .init(top: 10, left: 16, bottom: 10, right: 16)
         return layout
     }
-    func handleButtonTapped() {
+    func handleButtonTapped(model: CatalogData) {
         let vc = BottomSheetCatalog()
-        self.navigationController?.present(vc, animated: false)
+        vc.model = model
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = delegate
+        present(vc, animated: true)
     }
 }
 
@@ -76,9 +81,10 @@ extension CatalogViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CatalogViewCell", for: indexPath) as? CatalogCollectionViewCell else { return UICollectionViewCell() }
         cell.configureCatalogCards(model: viewModel.catalogData[indexPath.row])
-        cell.buttonAction = {
-            self.handleButtonTapped()
+        cell.buttonAction = { [weak self] model in
+            self?.handleButtonTapped(model: model)
         }
         return cell
     }
 }
+    

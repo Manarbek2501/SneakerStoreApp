@@ -9,9 +9,9 @@ import UIKit
 import Kingfisher
 import SnapKit
 
-
 class CatalogCollectionViewCell: UICollectionViewCell {
-    var buttonAction: (() -> Void)?
+    var buttonAction: ((CatalogData) -> Void)?
+    var model: CatalogData?
     
     let image: UIImageView = build {
         $0.layer.cornerRadius = 12
@@ -41,6 +41,7 @@ class CatalogCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        setAction()
     }
     override func layoutSubviews() {
         self.layer.cornerRadius = 4
@@ -51,6 +52,7 @@ class CatalogCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCatalogCards(model: CatalogData) {
+        self.model = model
         let url = URL(string: model.image)
         image.kf.setImage(with: url, placeholder: UIImage(systemName: "rays"))
         title.text = model.title
@@ -58,9 +60,12 @@ class CatalogCollectionViewCell: UICollectionViewCell {
         price.text = "$\(model.price)"
     }
     @objc func getTapped() {
-        buttonAction?()
+        setAction()
     }
-    
+    func setAction() {
+        guard let model = model else {return}
+        buttonAction?(model)
+    }
     private func setupUI() {
         [title, image, descriptionOfCatalog, price, button].forEach {
             containerView.addSubview($0)
