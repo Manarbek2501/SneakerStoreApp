@@ -9,7 +9,10 @@ import UIKit
 import Kingfisher
 import SnapKit
 
+
 class CatalogCollectionViewCell: UICollectionViewCell {
+    var buttonAction: (() -> Void)?
+    
     let image: UIImageView = build {
         $0.layer.cornerRadius = 12
     }
@@ -34,6 +37,7 @@ class CatalogCollectionViewCell: UICollectionViewCell {
         $0.layer.cornerRadius = 18
         $0.addTarget(self, action: #selector(getTapped), for: .touchUpInside)
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -54,8 +58,9 @@ class CatalogCollectionViewCell: UICollectionViewCell {
         price.text = "$\(model.price)"
     }
     @objc func getTapped() {
-        print("btn is tapped")
+        buttonAction?()
     }
+    
     private func setupUI() {
         [title, image, descriptionOfCatalog, price, button].forEach {
             containerView.addSubview($0)

@@ -53,6 +53,7 @@ class CatalogViewController: UIViewController {
             $0.left.equalToSuperview()
         }
     }
+    
     func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.itemSize = .init(width: 174, height: 282)
@@ -60,6 +61,10 @@ class CatalogViewController: UIViewController {
         layout.minimumInteritemSpacing = 10
         layout.sectionInset = .init(top: 10, left: 16, bottom: 10, right: 16)
         return layout
+    }
+    func handleButtonTapped() {
+        let vc = BottomSheetCatalog()
+        self.navigationController?.present(vc, animated: false)
     }
 }
 
@@ -70,10 +75,10 @@ extension CatalogViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CatalogViewCell", for: indexPath) as? CatalogCollectionViewCell else { return UICollectionViewCell() }
-        
         cell.configureCatalogCards(model: viewModel.catalogData[indexPath.row])
-        
-        
+        cell.buttonAction = {
+            self.handleButtonTapped()
+        }
         return cell
     }
 }
