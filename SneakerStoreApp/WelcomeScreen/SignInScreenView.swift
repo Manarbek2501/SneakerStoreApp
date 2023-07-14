@@ -24,6 +24,7 @@ class SignInScreenView: UIViewController {
         $0.backgroundColor = UIColor(red: 0.965, green: 0.965, blue: 0.965, alpha: 1)
         $0.layer.cornerRadius = 4
         $0.borderStyle = .roundedRect
+        $0.isSecureTextEntry = true
     }
     let button: CustomButton = build {
         $0.setTitle("Sign In", for: .normal)

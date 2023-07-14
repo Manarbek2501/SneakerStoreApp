@@ -23,6 +23,7 @@ class SignUpScreenView: UIViewController {
         $0.backgroundColor = UIColor(red: 0.965, green: 0.965, blue: 0.965, alpha: 1)
         $0.layer.cornerRadius = 4
         $0.borderStyle = .roundedRect
+        $0.isSecureTextEntry = true
     }
     let repeatPassTextField: UITextField = build {
         $0.placeholder = "Repeat password"
@@ -30,6 +31,7 @@ class SignUpScreenView: UIViewController {
         $0.backgroundColor = UIColor(red: 0.965, green: 0.965, blue: 0.965, alpha: 1)
         $0.layer.cornerRadius = 4
         $0.borderStyle = .roundedRect
+        $0.isSecureTextEntry = true
     }
     let button: CustomButton = build {
         $0.setTitle("Sign Up", for: .normal)
