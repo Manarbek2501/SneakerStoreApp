@@ -94,6 +94,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4B57E6E42A615DF90086D207 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		4B99BBBE2A53FBC1009132EF /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +134,7 @@
 		4BD14DC62A4C84E700A56B87 /* SneakerStoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				4B57E6E42A615DF90086D207 /* New Group */,
 				4BD14DD52A4C84E800A56B87 /* Info.plist */,
 				4BD14DE22A4C8A4C00A56B87 /* ProfileFeature */,
 				4BD14DE12A4C8A3C00A56B87 /* CartFeature */,

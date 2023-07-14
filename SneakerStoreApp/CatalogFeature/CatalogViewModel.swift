@@ -12,6 +12,7 @@ import FirebaseFirestoreSwift
 class CatalogViewModel {
     
     var catalogData = [CatalogData]()
+    var cartData = [CatalogData]()
     
     init() {
     }
@@ -36,15 +37,18 @@ class CatalogViewModel {
                        let description = document.get("description") as? String,
                        let price = document.get("price") as? String,
                        let image = document.get("image") as? String,
-                       let item = document.get("item") as? String
+                       let item = document.get("item") as? String,
+                       let quantity = document.get("quantity") as? String
                    else {
                        return nil
                    }
                    
-                   return CatalogData(title: title, description: description, image: image, price: price, item: item)
+                   return CatalogData(title: title, description: description, image: image, price: price, item: item, quantity: quantity)
                }
                
                completion()
            }
        }
+    
+    
 }
