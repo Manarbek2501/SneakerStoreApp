@@ -15,6 +15,7 @@ struct CatalogData: Codable, Identifiable, Equatable {
     var image: String
     var price: String
     var item: String
+    var quantity: String
 }
 
 extension CatalogData {

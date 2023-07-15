@@ -39,13 +39,11 @@ class BottomSheetCatalog: UIViewController {
     let stepperValue: UILabel = build {
         $0.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
     }
-    let button = CustomButton()
+    let button = CustomButton(title: "Add to cart", fontSize: .small)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        button.setTitle("Add to cart", for: .normal)
-        button.layer.cornerRadius = 25
         button.addTarget(self, action: #selector(actionButton), for: .touchUpInside)
         setupUI()
     }

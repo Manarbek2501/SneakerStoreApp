@@ -15,6 +15,7 @@ class CatalogCollectionViewCell: UICollectionViewCell {
     
     let image: UIImageView = build {
         $0.layer.cornerRadius = 12
+        $0.contentMode = .scaleToFill
     }
     let title: UILabel = build {
         $0.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
@@ -29,12 +30,11 @@ class CatalogCollectionViewCell: UICollectionViewCell {
     let containerView: UIView = build {
         $0.backgroundColor = .white
     }
-    let button = CustomButton()
+    let button = CustomButton(title: "Add to cart", fontSize: .small)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         button.addTarget(self, action: #selector(getTapped), for: .touchUpInside)
-        button.setTitle("Add to cart", for: .normal)
         setupUI()
         setAction()
     }
