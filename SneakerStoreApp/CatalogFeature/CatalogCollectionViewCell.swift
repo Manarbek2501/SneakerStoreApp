@@ -30,12 +30,11 @@ class CatalogCollectionViewCell: UICollectionViewCell {
     let containerView: UIView = build {
         $0.backgroundColor = .white
     }
-    let button = CustomButton()
+    let button = CustomButton(title: "Add to cart", fontSize: .small)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         button.addTarget(self, action: #selector(getTapped), for: .touchUpInside)
-        button.setTitle("Add to cart", for: .normal)
         setupUI()
         setAction()
     }

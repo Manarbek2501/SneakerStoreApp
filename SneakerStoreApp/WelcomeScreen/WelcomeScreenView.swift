@@ -9,6 +9,9 @@ import UIKit
 import SnapKit
 
 class WelcomeScreenView: UIViewController {
+    
+    //MARK: - UI Components
+    
     let image: UIImageView = build {
         $0.contentMode = .scaleToFill
         $0.image = UIImage(named: "welcomePage")
@@ -21,21 +24,54 @@ class WelcomeScreenView: UIViewController {
         $0.text = "Welcome to the biggest sneakers store app"
     }
     
-    let buttonSignUp: CustomButton = build {
-        $0.setTitle("Sign Up", for: .normal)
-        $0.addTarget(self, action: #selector(signUpAction), for: .touchUpInside)
-    }
+    let button = CustomButton(title: "Sign Up", fontSize: .big)
+    
     let signInText: UILabel = build {
         $0.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         $0.text = "I already have an account"
         $0.textAlignment = .center
     }
+    
+    //MARK: - UI Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        button.addTarget(self, action: #selector(signUpAction), for: .touchUpInside)
         setupUI()
         setupLabelTap()
     }
+    
+    
+    //MARK: - Setup UI
+    
+    private func setupUI() {
+        [image, mainText, button, signInText].forEach {
+            view.addSubview($0)
+        }
+        image.snp.makeConstraints {
+            $0.left.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.right.equalToSuperview()
+        }
+        mainText.snp.makeConstraints {
+            $0.top.equalTo(image.snp.bottom).offset(18)
+            $0.left.right.equalToSuperview().inset(16)
+        }
+        button.snp.makeConstraints {
+            $0.top.equalTo(mainText.snp.bottom).offset(24)
+            $0.left.right.equalToSuperview().inset(16)
+            $0.height.equalTo(54)
+        }
+        signInText.snp.makeConstraints {
+            $0.top.equalTo(button.snp.bottom).offset(24)
+            $0.left.right.equalToSuperview().inset(16)
+        }
+
+    }
+    
+    //MARK: - Selector
+    
     @objc private func signUpAction() {
         let vc = SignUpScreenView()
         navigationController?.pushViewController(vc, animated: true)
@@ -51,28 +87,5 @@ class WelcomeScreenView: UIViewController {
         let vc = SignInScreenView()
         navigationController?.pushViewController(vc, animated: true)
     }
-    private func setupUI() {
-        [image, mainText, buttonSignUp, signInText].forEach {
-            view.addSubview($0)
-        }
-        image.snp.makeConstraints {
-            $0.left.equalToSuperview()
-            $0.top.equalToSuperview()
-            $0.right.equalToSuperview()
-        }
-        mainText.snp.makeConstraints {
-            $0.top.equalTo(image.snp.bottom).offset(18)
-            $0.left.right.equalToSuperview().inset(16)
-        }
-        buttonSignUp.snp.makeConstraints {
-            $0.top.equalTo(mainText.snp.bottom).offset(24)
-            $0.left.right.equalToSuperview().inset(16)
-            $0.height.equalTo(54)
-        }
-        signInText.snp.makeConstraints {
-            $0.top.equalTo(buttonSignUp.snp.bottom).offset(24)
-            $0.left.right.equalToSuperview().inset(16)
-        }
-
-    }
+     
 }
