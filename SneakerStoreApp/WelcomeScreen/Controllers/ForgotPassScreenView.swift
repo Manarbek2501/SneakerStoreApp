@@ -14,7 +14,7 @@ class ForgotPassScreenView: UIViewController {
     
     private let resetTextField = CustomTextField(fieldType: .email)
 
-    let button = CustomButton(title: "Sign Up", fontSize: .medium)
+    let button = CustomButton(title: "Sign Up",hasBackground: true, fontSize: .medium)
     
     var selectedTextField: UITextField?
     
@@ -23,6 +23,7 @@ class ForgotPassScreenView: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
+        button.addTarget(self, action: #selector(didTapResetPass), for: .touchUpInside)
     }
     
     //MARK: - SetupUI
@@ -47,11 +48,19 @@ class ForgotPassScreenView: UIViewController {
         }
         button.snp.makeConstraints {
             $0.left.right.equalToSuperview().inset(16)
-            $0.top.equalTo(resetTextField.snp.bottom).offset(24)
+            $0.top.equalTo(resetTextField.snp.bottom).offset(12)
             $0.height.equalTo(54)
         }
     }
+    
+    //MARK: - Selector
+    
+    @objc private func didTapResetPass() {
+        print("reset button is tapped")
+    }
 }
+
+    //MARK: - Extension
 
 extension ForgotPassScreenView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {

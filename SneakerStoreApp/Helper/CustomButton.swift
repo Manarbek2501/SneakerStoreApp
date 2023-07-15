@@ -16,11 +16,11 @@ class CustomButton: UIButton {
     init(title: String, hasBackground: Bool = false, fontSize: FontSize) {
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
-        self.backgroundColor = hasBackground ? .clear : .black
+        self.backgroundColor = hasBackground ? .black : .clear
         self.layer.cornerRadius = 12
         self.layer.masksToBounds = true
         
-        let titleColor: UIColor = hasBackground ? .black : .white
+        let titleColor: UIColor = hasBackground ? .white : .black
         self.setTitleColor(titleColor, for: .normal)
         
         switch fontSize {

@@ -17,7 +17,8 @@ class SignUpScreenView: UIViewController {
     private let passTextField = CustomTextField(fieldType: .password)
     private let repeatPassTextField = CustomTextField(fieldType: .repeatPassword)
     
-    let button = CustomButton(title: "Sign Up", fontSize: .medium)
+    let button = CustomButton(title: "Sign Up",hasBackground: true, fontSize: .medium)
+    
     var selectedTextField: UITextField?
     
     //MARK: - Lifecycle
@@ -30,6 +31,7 @@ class SignUpScreenView: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .done, target: self, action: #selector(backButton))
         self.navigationController?.navigationBar.tintColor = .black
         setupUI()
+        button.addTarget(self, action: #selector(didTapSignUp), for: .touchUpInside)
     }
     
     
@@ -80,6 +82,10 @@ class SignUpScreenView: UIViewController {
     
     @objc private func backButton() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func didTapSignUp() {
+        print("Sign up button is tapped")
     }
 }
 

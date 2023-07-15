@@ -14,14 +14,10 @@ class SignInScreenView: UIViewController {
     private let emailTextField = CustomTextField(fieldType: .email)
     private let passTextField = CustomTextField(fieldType: .password)
     
-    let button = CustomButton(title: "Sign In", fontSize: .medium)
+    let button = CustomButton(title: "Sign In", hasBackground: true, fontSize: .medium)
     
-    let forgotPassText: UILabel = build {
-        $0.text = "Forgot Password?"
-        $0.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        $0.textColor = .black
-        $0.textColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1)
-    }
+    let forgotPassText = CustomButton(title: "Forgot Password?", fontSize: .small)
+    
     var selectedTextField: UITextField?
     
     //MARK: - Lifecycle
@@ -33,7 +29,8 @@ class SignInScreenView: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .done, target: self, action: #selector(backButton))
         self.navigationController?.navigationBar.tintColor = .black
         setupUI()
-        handleLabelTap()
+        button.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
+        forgotPassText.addTarget(self, action: #selector(didTapForgetPass), for: .touchUpInside)
     }
     
     //MARK: - SetupUI
@@ -81,13 +78,12 @@ class SignInScreenView: UIViewController {
     @objc private func backButton() {
         self.navigationController?.popViewController(animated: true)
     }
-    private func handleLabelTap() {
-        let labelTapped = UITapGestureRecognizer(target: self, action: #selector(labelIsTapped))
-        self.forgotPassText.isUserInteractionEnabled = true
-        self.forgotPassText.addGestureRecognizer(labelTapped)
+    
+    @objc private func didTapSignIn() {
+        print("Sign in button is tapped")
     }
     
-    @objc private func labelIsTapped() {
+    @objc private func didTapForgetPass() {
         let vc = ForgotPassScreenView()
         navigationController?.present(vc, animated: true)
     }

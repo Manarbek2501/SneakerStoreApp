@@ -109,11 +109,8 @@
 		4B57E6E42A615DF90086D207 /* WelcomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4B57E6F22A62F0900086D207 /* Controllers */,
 				4B57E6ED2A62C1B70086D207 /* Views */,
-				4B57E6E52A615E5F0086D207 /* WelcomeScreenView.swift */,
-				4B57E6E72A6162510086D207 /* SignUpScreenView.swift */,
-				4B57E6E92A61EB640086D207 /* SignInScreenView.swift */,
-				4B57E6EB2A62BCE70086D207 /* ForgotPassScreenView.swift */,
 			);
 			path = WelcomeScreen;
 			sourceTree = "<group>";
@@ -125,6 +122,17 @@
 				4B57E6F02A62C5E60086D207 /* CustomTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4B57E6F22A62F0900086D207 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B57E6E52A615E5F0086D207 /* WelcomeScreenView.swift */,
+				4B57E6E72A6162510086D207 /* SignUpScreenView.swift */,
+				4B57E6E92A61EB640086D207 /* SignInScreenView.swift */,
+				4B57E6EB2A62BCE70086D207 /* ForgotPassScreenView.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		4B99BBBE2A53FBC1009132EF /* BottomSheet */ = {

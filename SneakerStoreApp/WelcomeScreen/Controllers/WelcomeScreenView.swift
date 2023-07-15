@@ -24,13 +24,8 @@ class WelcomeScreenView: UIViewController {
         $0.text = "Welcome to the biggest sneakers store app"
     }
     
-    let button = CustomButton(title: "Sign Up", fontSize: .big)
-    
-    let signInText: UILabel = build {
-        $0.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-        $0.text = "I already have an account"
-        $0.textAlignment = .center
-    }
+    let button = CustomButton(title: "Sign Up",hasBackground: true, fontSize: .big)
+    let signInText = CustomButton(title: "I already have an account", fontSize: .medium)
     
     //MARK: - UI Lifecycle
     

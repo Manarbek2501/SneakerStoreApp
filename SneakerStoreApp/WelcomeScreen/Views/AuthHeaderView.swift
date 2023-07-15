@@ -11,7 +11,6 @@ import SnapKit
 class AuthHeaderView: UIView {
 
     //MARK: - UI Components
-    
     let circleImage: UIImageView = build {
         $0.image = UIImage(named: "circleImage")
         $0.layer.masksToBounds = false
